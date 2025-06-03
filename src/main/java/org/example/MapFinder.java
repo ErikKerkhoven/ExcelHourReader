@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.File;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -31,8 +32,18 @@ public class MapFinder {
     public ArrayList<String> getNamesOfWorkers(){
         Path workersMapPath = Paths.get("C:\\Users\\erikk\\OneDrive\\Bureaublad\\Weekstaten");
         ArrayList<String> namesOfWorkers = new ArrayList<>();
-
-
+        File workersMap = workersMapPath.toFile();
+        for(File file : workersMap.listFiles()){
+            namesOfWorkers.add(file.getName());
+        }
         return namesOfWorkers;
     }
+
+    public void printWorkers(ArrayList<String> namesOfWorkers) {
+        for(int i = 0; i < namesOfWorkers.size(); i++){
+            System.out.println(i + 1 + ". " + namesOfWorkers.get(i));
+        }
+    }
+
+
 }

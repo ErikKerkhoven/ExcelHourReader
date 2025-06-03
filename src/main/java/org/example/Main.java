@@ -5,10 +5,8 @@ import java.io.IOException;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) throws IOException {
-
-        FileReader fr = new FileReader("Erik", 14);
-
-        fr.FirstRead();
+    UI ui = new UI();
+    ui.start();
 
     }
 }

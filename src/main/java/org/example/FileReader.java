@@ -14,14 +14,16 @@ import java.nio.file.Paths;
 
 public class FileReader {
     private int week;
+    private String worker;
     private Workbook weekStaat;
     private MapFinder mapFinder;
     private InputStream iStream;
     private Sheet sheet;
 
 
-    public FileReader(String worker, int week) throws IOException {
-        this.week = week;
+    public FileReader() throws IOException {
+        this.week = 14;
+        this.worker = "Erik";
         this.mapFinder = new MapFinder();
         this.iStream = new FileInputStream(mapFinder.getFullPath(worker, week).toFile());
         this.weekStaat = WorkbookFactory.create(iStream);
