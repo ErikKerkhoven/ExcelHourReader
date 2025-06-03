@@ -22,7 +22,6 @@ public class MapFinder {
         String fullPathString = this.pathToBaseMap + "\\" + worker + "\\" + this.weekStaatName + week + " " + worker+ ".xlsx";
         Path fullPath = Paths.get(fullPathString);
 
-        System.out.println(fullPathString);
 
         return fullPath;
 
